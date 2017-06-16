@@ -19,7 +19,7 @@ automation:
   - alias: 'Rainy Day'
     trigger:
       - platform: state
-        entity_id: sensor.precip_intensity
+        entity_id: sensor.dark_sky_precip
         to: 'rain'
     condition:
       - platform: state
@@ -39,7 +39,7 @@ And then of course turn off the lamp when it stops raining but only if it's with
   - alias: 'Rain is over'
     trigger:
       - platform: state
-        entity_id: sensor.precip_intensity
+        entity_id: sensor.dark_sky_precip
         to: 'None'
     condition:
       - condition: sun
